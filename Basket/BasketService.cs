@@ -20,7 +20,7 @@ namespace Basket.Services
 
         public decimal GetTotal(BasketModel basket)
         {
-            throw new NotImplementedException();
+            return _calculatorService.CalculateTotal(basket);
         }
     }
 }

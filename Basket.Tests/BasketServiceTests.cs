@@ -19,6 +19,8 @@ namespace Basket.Tests
         [TestInitialize]
         public void Setup()
         {
+            _calculatorServiceMock = new Mock<ICalculatorService>();
+
             _basket = new BasketModel()
             {
                 Products = new List<ProductModel>()

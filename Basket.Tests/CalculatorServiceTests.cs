@@ -110,12 +110,12 @@ namespace Basket.Tests
                     new ProductModel()
                     {
                         Name = "Butter",
-                        Price = 1.15M
+                        Price = 0.8M
                     },
                     new ProductModel()
                     {
                         Name = "Butter",
-                        Price = 1.15M
+                        Price = 0.8M
                     },
                     new ProductModel()
                     {

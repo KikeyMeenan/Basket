@@ -19,14 +19,18 @@ namespace Basket.Services
                 {
                     if (basket.Products.Count(x => x.Name.ToLower() == "butter") >= 2 && basket.Products.Any(x => x.Name.ToLower() == "bread"))
                     {
-                        var firstbread = basket.Products.FirstOrDefault(x => x.Name.ToLower() == "bread");
-                        firstbread.Price = firstbread.Price / 2;
+                        var firstBread = basket.Products.FirstOrDefault(x => x.Name.ToLower() == "bread");
+                        firstBread.Price = firstBread.Price / 2;
                     }
 
                     if (basket.Products.Count(x => x.Name.ToLower() == "milk") >= 3)
                     {
-                        var firstMilk = basket.Products.FirstOrDefault(x => x.Name.ToLower() == "milk");
-                        firstMilk.Price = 0M;
+                        var milksInBasket = basket.Products.Where(x => x.Name.ToLower() == "milk");
+                        var freeMilks = milksInBasket.Count()/3;
+                        for (int i = 0; i < freeMilks; i++)
+                        {
+                            milksInBasket.ElementAt(i).Price = 0M;
+                        }
                     }
 
                     total = basket.Products.Sum(x => x.Price);
