@@ -169,32 +169,32 @@ namespace Basket.Tests
             _service = new CalculatorService();
         }
 
-        [TestCategory("BasketService"), TestMethod]
-        public void Basket_ScenarioOne()
+        [TestCategory("CalculatorService"), TestMethod]
+        public void Calculator_ScenarioOne()
         {
             var result = _service.CalculateTotal(_basketOne);
 
             Assert.IsTrue(result == 2.95M);
         }
 
-        [TestCategory("BasketService"), TestMethod]
-        public void Basket_ScenarioTwo()
+        [TestCategory("CalculatorService"), TestMethod]
+        public void Calculator_ScenarioTwo()
         {
             var result = _service.CalculateTotal(_basketTwo);
 
             Assert.IsTrue(result == 3.1M);
         }
 
-        [TestCategory("BasketService"), TestMethod]
-        public void Basket_ScenarioThree()
+        [TestCategory("CalculatorService"), TestMethod]
+        public void Calculator_ScenarioThree()
         {
             var result = _service.CalculateTotal(_basketThree);
 
             Assert.IsTrue(result == 3.45M);
         }
 
-        [TestCategory("BasketService"), TestMethod]
-        public void Basket_ScenarioFour()
+        [TestCategory("CalculatorService"), TestMethod]
+        public void Calculator_ScenarioFour()
         {
             var result = _service.CalculateTotal(_basketFour);
 
